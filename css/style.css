@@ -372,3 +372,97 @@ aside h2 {
         font-size: 1.2em;
     }
 }
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (min-width: 992px) {
+    @keyframes typing {
+        0% {
+            width: 0ch
+        }
+
+        /*Text is hidden*/
+        30% {
+            width: 6ch;
+        }
+
+        /*The enitre header will be typed out 1 character at a time*/
+        80% {
+            width: 6ch;
+        }
+
+        /*Text stays visible*/
+        90% {
+            width: 0ch;
+        }
+
+        /*Text is deleted*/
+        100% {
+            width: 0ch;
+        }
+
+        /*Text stays hidden*/
+    }
+
+    @keyframes cursor {
+
+        0%,
+        100% {
+            border-color: transparent;
+        }
+
+        50% {
+            border-color: white;
+        }
+    }
+
+    h1 {
+        animation: cursor 1s infinite step-end, typing 15s infinite steps(16);
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 4px solid white;
+        margin-top: 1em;
+    }
+
+    p {
+        animation-name: none;
+        font-size: 1.5em;
+    }
+
+    ul,
+    ol {
+        padding-left: 3em;
+        border-style: solid;
+        border-width: 0px 3px 0px 3px;
+    }
+
+    .info-grid {
+        grid-template-columns: auto auto auto auto auto;
+        border-style: solid;
+        border-width: 0px 3px 0px 3px;
+    }
+
+    .item-h2 {
+        margin: 0;
+        font-family: 'Leckerli One', cursive;
+        text-shadow: 0 2px white;
+    }
+
+    .item-h3 {
+        padding-left: 2em;
+        font-size: 2em;
+        border-style: solid;
+        border-width: 0px 3px 0px 3px;
+    }
+
+    .photo-row {
+        padding-left: 1em;
+        padding-bottom: 3em;
+        border-style: solid;
+        border-width: 0px 3px 0px 3px;
+    }
+
+    .photo-column img {
+        border-radius: 20%;
+    }
+
+}
