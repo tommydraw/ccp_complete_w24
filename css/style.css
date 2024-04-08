@@ -68,7 +68,6 @@ li a:active {
 
 .photo-column {
     flex: 25%;
-    max-width: 25%;
     padding: 0 4px;
 }
 
@@ -118,12 +117,6 @@ body {
     color: var(--color-text);
 }
 
-/* Make images easier to work with 
-img {
-    display: block;
-    max-width: 100%;
-}
-*/
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -442,9 +435,10 @@ aside h2 {
     }
 
     .item-h2 {
+        background-color: #FFFDD0;
         margin: 0;
         font-family: 'Leckerli One', cursive;
-        text-shadow: 0 2px white;
+        text-shadow: 0 3px orange;
     }
 
     .item-h3 {
